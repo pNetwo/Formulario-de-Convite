@@ -1,0 +1,130 @@
+@import url(fields/index.css);
+
+form {
+  margin-top: 4rem;
+}
+
+fieldset {
+  border: none;
+
+  display: grid;
+  gap: 1.6rem;
+
+  & legend {
+    font: var(--heading-sm);
+    color: var(--text-heading);
+
+    margin-bottom: 1.6rem;
+  }
+
+  & .input-wrapper,
+  .textarea-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    & label {
+      font: var(--body-sm);
+      color: var(--text-body);
+      margin-bottom: 1.2rem;
+    }
+
+    & input,
+    textarea {
+      padding: 1.2rem;
+
+      border-radius: 0.8rem;
+      border: 1px solid var(--input-stroke);
+
+      background-color: var(--input-base);
+      font: var(--body-md);
+      color: var(--input-placeholder);
+
+      &:focus {
+        outline: none;
+        border: 1px solid var(--brand-light);
+      }
+    }
+  }
+
+  & #start-date,
+  #end-date {
+    text-transform: uppercase;
+
+    display: flex;
+    justify-content: space-between;
+    gap: 1.6rem;
+
+    &::-webkit-calendar-picker-indicator {
+      display: none;
+    }
+  }
+
+  .radio-wrapper {
+    border: 1px solid var(--input-stroke);
+    background-color: var(--input-base);
+    border-radius: 0.8rem;
+
+    padding: 0.4rem;
+    gap: 0.4rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    & .inner-wrapper {
+      border-radius: 0.8rem;
+
+      display: flex;
+      align-items: center;
+
+      flex: 1 50%;
+      gap: 0.8rem;
+
+      transition: all 0.3s ease-in-out;
+
+      & input[type="radio"] {
+        inset: 0;
+        opacity: 0;
+
+        position: absolute;
+        z-index: -1;
+      }
+
+      & .checkbox-type {
+        background-image: url(/assets/icons/building-1.svg);
+        width: 1.6rem;
+        height: 1.6rem;
+
+        margin: 0.8rem 0rem 0.8rem 1.8rem;
+      }
+
+      & .checkbox-online {
+        background-image: url(/assets/icons/video.svg);
+        width: 1.6rem;
+        height: 1.6rem;
+
+        margin: 0.8rem 0rem 0.8rem 1.8rem;
+      }
+
+      &:hover,
+      &:focus-within {
+        background-color: var(--shape-hover);
+
+        & .checkbox-type {
+          background-image: url(/assets/icons/building-2.svg);
+        }
+
+        & .checkbox-online {
+          background-image: url(/assets/icons/video-2.svg);
+        }
+      }
+
+      & label {
+        font: var(--body-sm);
+        color: var(--text-body);
+
+        margin: 0.8rem 0.8rem 0.8rem 0rem;
+      }
+    }
+  }
+}
