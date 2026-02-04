@@ -31,7 +31,6 @@ Um projeto desenvolvido durante a jornada de estudos na Rocketseat. O Festivite 
 
 - **HTML5**: Estrutura semântica do formulário
 - **CSS3**: Estilização com CSS modular e variáveis customizadas
-- **JavaScript**: Validações e interatividade do formulário
 - **Google Fonts**: Tipografia personalizada (Baloo 2, Leckerli One, Open Sans)
 
 ## 📁 Estrutura do Projeto
